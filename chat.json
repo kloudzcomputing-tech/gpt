@@ -1,0 +1,78 @@
+[
+    {
+        "role": "user",
+        "content": "create a schedule"
+    },
+    {
+        "id": "msg_6857c13462b8819d991b90c82525c3850da12d8bb8cae9a7",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+            {
+                "type": "output_text",
+                "text": "Of course! I can help you create a schedule.\n\nCould you please provide me with the following details?\n- **Title** of the event or task\n- **Description** (optional, but helpful)\n- **Date**\n- **Time**\n\nOnce you provide those details, I’ll set up your schedule!",
+                "annotations": []
+            }
+        ],
+        "status": "completed",
+        "providerData": {}
+    },
+    {
+        "role": "user",
+        "content": "create a schedule"
+    },
+    {
+        "id": "msg_6857c13462b8819d991b90c82525c3850da12d8bb8cae9a7",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+            {
+                "type": "output_text",
+                "text": "Of course! I can help you create a schedule.\n\nCould you please provide me with the following details?\n- **Title** of the event or task\n- **Description** (optional, but helpful)\n- **Date**\n- **Time**\n\nOnce you provide those details, I’ll set up your schedule!",
+                "annotations": []
+            }
+        ],
+        "status": "completed",
+        "providerData": {}
+    },
+    {
+        "role": "user",
+        "content": "title:Meet with bryan , no description , tomorrow 4 pm"
+    },
+    {
+        "type": "function_call",
+        "id": "fc_6857c18382d0819d9cabccc2f19558af0da12d8bb8cae9a7",
+        "callId": "call_KICHy082eWCGvQB6Vpa8PiJC",
+        "name": "createSchedule",
+        "status": "completed",
+        "arguments": "{\"title\":\"Meet with bryan\",\"description\":\"\",\"date\":\"2024-06-19\",\"time\":\"16:00\"}",
+        "providerData": {
+            "id": "fc_6857c18382d0819d9cabccc2f19558af0da12d8bb8cae9a7",
+            "type": "function_call"
+        }
+    },
+    {
+        "type": "function_call_result",
+        "name": "createSchedule",
+        "callId": "call_KICHy082eWCGvQB6Vpa8PiJC",
+        "status": "completed",
+        "output": {
+            "type": "text",
+            "text": "schedule created"
+        }
+    },
+    {
+        "id": "msg_6857c1846754819d894d01675df1716c0da12d8bb8cae9a7",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+            {
+                "type": "output_text",
+                "text": "Your schedule has been created:\n\n- **Title:** Meet with bryan\n- **Date & Time:** Tomorrow at 4:00 PM\n\nIf you'd like to add more details, set a reminder, or make changes, just let me know!",
+                "annotations": []
+            }
+        ],
+        "status": "completed",
+        "providerData": {}
+    }
+]
