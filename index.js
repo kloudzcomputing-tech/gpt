@@ -16,7 +16,9 @@ const personalAssistant = new Agent({
     model: 'gpt-4o-mini',
     tools:[webSearchTool()]
 })
-
+app.get('/',(req,res)=>{
+    return res.send('Hello World')
+})
 app.post('/api/ask',async(req,res)=>{
     try {
         const {message} = req.body;
