@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
 dotenv.config();
+import { z } from "zod";
 import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
@@ -21,7 +22,21 @@ const personalAssistant = new Agent({
     name: 'Personal Assistant',
     instructions: 'You are a personal assistant that can help with tasks related to the user.',
     model: 'gpt-4o-mini',
-    tools: [webSearchTool()]
+    tools: [webSearchTool()],
+    outputType:z.object({
+        message:z.string(),
+        followUpQuestions:z.array(z.string().describe('Follow up questions what user can ask next')),
+    })
+})
+
+const paymentAgent = new Agent({
+    name: 'Payment Agent',
+    instructions: 'You are a payment agent that can help with tasks related to the user.',
+    model: 'gpt-4o-mini',
+    outputType:z.object({
+        amount:z.number(),
+        currency:z.string()
+    })
 })
 
 app.post('/api/ask', async (req, res) => {
